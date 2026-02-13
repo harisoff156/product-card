@@ -4,12 +4,35 @@
   font-style: normal;
 }
 
+.button_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 520px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.btn {
+  background-color: #8bb5d2;
+  font-size: 20px;
+  border-radius: 14px;
+  width: 250px;
+}
+
+.recolor {
+  background-color: #6afbdc;
+}
+
 .all-elements {
   width: 1110px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  position: relative;
 }
 
 .product-selection__title {
