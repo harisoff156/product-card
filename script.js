@@ -43,7 +43,7 @@ mainTitle.addEventListener('mouseenter', () => {
   console.log(mainTitle.textContent);
 });
 
-// перекраска кнопки при нажатии на нее
+// смена цвета кнопки при нажатии на нее
 const clickRecolorButton = document.getElementById("click-recolor-button");
 clickRecolorButton.addEventListener('click', () => {
   clickRecolorButton.classList.toggle('recolor');
