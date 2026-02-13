@@ -32,7 +32,7 @@ function openGoogle() {
   if (answer === true) {
     window.open('https://google.com');
   } else {
-    console.log('Пользователь отменил переход на Google');
+    console.log('Пользователь отменил переход на  сайт Google');
   }
 };
 
