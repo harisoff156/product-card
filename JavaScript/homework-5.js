@@ -1,22 +1,22 @@
 // задание 3: функция принимает 2 парамаетра и выводит сообщение в консоль
 
-function currentTemperature(city, temperature) {
+function calcCurrentTemper(city, temperature) {
   console.log(`Сейчас в ${city} температура ${temperature} градусов`);
 }
 
-currentTemperature('Бандаберг', 24);
+calcCurrentTemper('Бандаберг', 24);
 
 // задание 4: функция с проверкой
 
-const LIGHT_SPEED = 107925284.8
+const LIGHT_SPEED = 107925284.8;
 
 const checkSpeed = speed => {
   if (speed > LIGHT_SPEED) {
-    console.log('Сверхсветовая скорость')
+    console.log('Сверхсветовая скорость');
   } else if (speed === LIGHT_SPEED) {
-    console.log("Скорость света")
+    console.log("Скорость света");
   } else {
-    console.log('Субсветовая скорость')
+    console.log('Субсветовая скорость');
   }
 }
 
@@ -24,15 +24,15 @@ checkSpeed(107925284.8);
 
 // задание 5: функция покупки товара
 
-let butter = 'Сливочное масло'
-let butterPrice = 720
+let butter = 'Сливочное масло';
+let butterPrice = 720;
 
 const purchase = budget => {
   if (budget >= butterPrice) {
-    console.log(`${butter} приобретено. Спасибо за покупку!`)
+    console.log(`${butter} приобретено. Спасибо за покупку!`);
   } else {
-    let difference = butterPrice - budget
-    console.log(`Вам не хватает ${difference}, пополните баланс`)
+    let difference = butterPrice - budget;
+    console.log(`Вам не хватает ${difference}, пополните баланс`);
   }
 }
 
@@ -44,8 +44,8 @@ function calculateBudget() {
 
 }
 
-// задание 7: именование переменных
+// задание 7: именование переменных 
 
-let currentTime
-const PI = 3.14
-let familyExpenses
+let currentTime = "13:11";
+const PI = 3.14;
+let familyExpenses = '60000';
