@@ -36,7 +36,7 @@ const purchase = budget => {
   }
 }
 
-purchase(7)
+purchase(7);
 
 // задание 6: именование функции
 
