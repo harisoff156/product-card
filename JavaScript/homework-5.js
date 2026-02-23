@@ -1,10 +1,10 @@
 // задание 3: функция принимает 2 парамаетра и выводит сообщение в консоль
 
-function calcCurrentTemper(city, temperature) {
+function showCurrentTemperature(city, temperature) {
   console.log(`Сейчас в ${city} температура ${temperature} градусов`);
 }
 
-calcCurrentTemper('Бандаберг', 24);
+showCurrentTemperature('Бандаберг', 24);
 
 // задание 4: функция с проверкой
 
