@@ -45,7 +45,7 @@ console.log(showObjectValue(auto, 'model'));
 const products = ['хлеб', 'яйца', 'молоко', 'творог', 'финики'];
 
 // задание №8 создание массива
-const schoolСurriculum = [
+const schoolCurriculum = [
   {
     title: "Преступление и наказание",
     author: "Фёдор Достоевский",
@@ -69,7 +69,7 @@ const schoolСurriculum = [
   }
 ];
 
-schoolСurriculum.push({
+schoolCurriculum.push({
   title: "Отцы и дети",
   author: "Иван Тургенев",
   year: 1862,
