@@ -22,15 +22,15 @@ const updatedAuto = { ...auto, owner: person.name };
 
 // задание №5 создание функции добавляющей свойство в объект
 
-const isMaxSpeed = obj => {
-  let maxSpeed = ('maxSpeed' in obj);
-  if (maxSpeed == false) {
-    const updatedObj = { ...obj, maxSpeed: '160' };
-    return updatedObj;
-  } else {
+const addProperty = (obj, key, value) => {
+  if (key in obj) {
     return;
   }
+
+  obj[key] = value;
 };
+
+addProperty(updatedAuto, 'maxSpeed', '160');
 
 // задание №6 создание функции вывода пары(свойсво:значение)
 
@@ -38,7 +38,7 @@ const showObjectValue = (obj, key) => {
   return obj[key];
 };
 
-console.log(showObjectValue(auto, 'model'));
+showObjectValue(auto, 'model');
 
 // задание №7 создание массива
 
@@ -103,20 +103,13 @@ const russianClassic = [
   }
 ];
 
-const unityArrays = [...schoolСurriculum, ...russianClassic];
+const unityArrays = [...schoolCurriculum, ...russianClassic];
 
 // задание №10 проверка редкости книги
 
-const isRareBook = unityArrays.map(function (unityArrays) {
-  if (unityArrays.year >= '1870') {
-    return {
-      isRare: 'false'
-    }
-  } else {
-    return {
-      isRare: 'true'
-    }
-  }
+const setValue = unityArrays.map(function (unityArrays) {
+  if (unityArrays.year < '1870') return "isRare: 'true'";
+  return "isRare: 'false'";
 });
 
 
