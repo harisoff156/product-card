@@ -107,10 +107,12 @@ const unityArrays = [...schoolCurriculum, ...russianClassic];
 
 // задание №10 назначение в зависимости от редкости книги
 
+const threshold = 1970;
+
 const setValue = unityArrays.map(book => {
   return {
     ...book,
-    isRare: book.year < 1970
+    isRare: book.year < threshold
   };
 });
 
