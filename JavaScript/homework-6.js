@@ -105,7 +105,7 @@ const russianClassic = [
 
 const unityArrays = [...schoolCurriculum, ...russianClassic];
 
-// задание №10 проверка редкости книги
+// задание №10 назначение в зависимости от редкости книги
 
 const setValue = unityArrays.map(book => {
   return {
