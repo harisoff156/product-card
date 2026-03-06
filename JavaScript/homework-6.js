@@ -22,7 +22,7 @@ const updatedAuto = { ...auto, owner: person.name };
 
 // задание №5 создание функции добавляющей свойство в объект
 
-const addProperty = (obj, key, value) => {
+const addPropertyToObject = (obj, key, value) => {
   if (key in obj) {
     return;
   }
@@ -30,7 +30,7 @@ const addProperty = (obj, key, value) => {
   obj[key] = value;
 };
 
-addProperty(updatedAuto, 'maxSpeed', '160');
+addPropertyToObject(updatedAuto, 'maxSpeed', '160');
 
 // задание №6 создание функции вывода пары(свойсво:значение)
 
@@ -107,9 +107,11 @@ const unityArrays = [...schoolCurriculum, ...russianClassic];
 
 // задание №10 проверка редкости книги
 
-const setValue = unityArrays.map(function (unityArrays) {
-  if (unityArrays.year < '1870') return "isRare: 'true'";
-  return "isRare: 'false'";
+const setValue = unityArrays.map(book => {
+  return {
+    ...book,
+    isRare: book.year < 1970
+  };
 });
 
 
