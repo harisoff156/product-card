@@ -57,7 +57,7 @@ console.log(commentEmailsByReduce);
 console.log(commentEmailsByMap);
 
 //Задание 12 - приведение массива к строке
-const commentEmailsToString = arrayOfEmailsMap.join(" ");
+const commentEmailsToString = commentEmailsByMap.join(" ");
 console.log(commentEmailsToString);
 
 
