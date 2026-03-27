@@ -1,18 +1,17 @@
 import { comments } from "/JavaScript/comments.js";
 // Задание 2 - фильтрация массива
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const newNummers = numbers.slice(4);
-console.log(newNummers);
+const filteredNumbers = numbers.slice(4);
+console.log(filteredNumbers);
 
 // Задание 3 - проверка вхождения элемента в массив
 const kitchenTools = ['ложка', 'вилка', 'сковородка', 'кастрюля', 'поварешка'];
-const newKitchenTools = kitchenTools.includes('сковорода');
-console.log(newKitchenTools);
+const hasFryingPan = kitchenTools.includes('сковорода');
+console.log(hasFryingPan);
 
 // Задание 4 - функция - переворачиватель
 const reverceArray = array => {
   array.reverse();
-  return array;
 };
 
 console.log(reverceArray(numbers));
@@ -20,47 +19,45 @@ console.log(reverceArray(kitchenTools));
 
 // Задание 7 - перемещение объектов из массива
 
-function includeEmailsCom(domen) {
+function getCommentEmailsByCom(domen) {
   return comments.filter(comment => comment.email.includes(domen));
 }
 
-console.log(includeEmailsCom('.com'));
+console.log(getCommentEmailsByCom('.com'));
 
 // Задание 8 - перезапись значений в массиве
-const updatedComments = comments.map(comment =>
-  comment.id <= 5
-    ? { ...comment, postId: 2 }
-    : { ...comment, postId: 1 }
-);
+const updatedComments = comments.map(comment => ({
+  ...comment,
+  postId: comment.id <= 5 ? "2" : "1"
+}));
 
 console.log(updatedComments);
 
 // Задание 9 - вывод двух значений объекта
-const idAndName = comments.map(({ id, name }) => ({ id, name }));
-console.log(idAndName);
+const commentNames = comments.map(({ id, name }) => ({ id, name }));
+console.log(commentNames);
 
 // Задание 10 - проверка длины тела сообщения
-const lengthOfBody = comments.map(comment =>
-  comment.body.length > 180
-    ? { ...comment, isInvalid: true }
-    : { ...comment, isInvalid: false }
-);
+const isInValidBody = comments.map(comment => ({
+  ...comment,
+  isInvalid: comment.body.length > 180 ? true : false
+}));
 
-console.log(lengthOfBody);
+console.log(isInValidBody);
 
 //Задание 11 - вывод массива почт
-const arrayOfEmailsReduce = comments.reduce((acc, comment) => {
+const commentEmailsByReduce = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
 }, []);
 
-const arrayOfEmailsMap = comments.map(comment => comment.email);
-console.log(arrayOfEmailsReduce);
+const commentEmailsByMap = comments.map(comment => comment.email);
 
-console.log(arrayOfEmailsMap);
+console.log(commentEmailsByReduce);
+console.log(commentEmailsByMap);
 
 //Задание 12 - приведение массива к строке
-const arrayOfEmailsToString = arrayOfEmailsMap.join(" ");
-console.log(arrayOfEmailsToString);
+const commentEmailsToString = arrayOfEmailsMap.join(" ");
+console.log(commentEmailsToString);
 
 
