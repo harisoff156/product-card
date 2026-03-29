@@ -19,16 +19,16 @@ console.log(reverceArray(kitchenTools));
 
 // Задание 7 - перемещение объектов из массива
 
-function getCommentEmailsByCom(domen) {
+function getCommentEmailsByDomen(domen) {
   return comments.filter(comment => comment.email.includes(domen));
 }
 
-console.log(getCommentEmailsByCom('.com'));
+console.log(getCommentEmailsByDomen('.com'));
 
 // Задание 8 - перезапись значений в массиве
 const updatedComments = comments.map(comment => ({
   ...comment,
-  postId: comment.id <= 5 ? "2" : "1"
+  postId: comment.id <= 5 ? 2 : 1
 }));
 
 console.log(updatedComments);
@@ -38,12 +38,12 @@ const commentNames = comments.map(({ id, name }) => ({ id, name }));
 console.log(commentNames);
 
 // Задание 10 - проверка длины тела сообщения
-const isInValidBody = comments.map(comment => ({
+const isValidatedComments = comments.map(comment => ({
   ...comment,
-  isInvalid: comment.body.length > 180 ? true : false
+  isInvalid: comment.body.length > 180
 }));
 
-console.log(isInValidBody);
+console.log(isValidatedComments);
 
 //Задание 11 - вывод массива почт
 const commentEmailsByReduce = comments.reduce((acc, comment) => {
