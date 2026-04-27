@@ -68,8 +68,10 @@ submitRegistrationBtn.addEventListener('click', () => {
       modal.classList.remove('modal-showed');
       overlay.style.display = 'none';
       const updatedData = { ...data, createdOn: new Date() };
-      console.log(data);
       console.log(updatedData);
     });
   } else confirm('Регистрация не удалась!');
 });
+
+
+const user = updatedData;
