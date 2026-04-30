@@ -4,6 +4,10 @@
   font-style: normal;
 }
 
+body {
+  margin: auto;
+}
+
 .button_wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -13,6 +17,7 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
+  margin-top: 20px;
 }
 
 .btn {
@@ -24,6 +29,91 @@
 
 .recolor {
   background-color: #6afbdc;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* opacity: 0.9; */
+  z-index: 999;
+}
+
+#open-registration-button {
+  position: absolute;
+  background-color: #8c6bb7;
+  font-size: 20px;
+  border-radius: 14px;
+  padding: 12px;
+  right: 2%;
+  margin-top: 20px;
+}
+
+.close-register-button {
+  position: absolute;
+  right: 4%;
+  top: 4.5%;
+}
+
+.close-register-button:hover {
+  background-color: #c0392b;
+  opacity: 0.9;
+}
+
+.modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  position: fixed;
+  background-color: antiquewhite;
+  border-radius: 5%;
+  gap: 10px;
+  padding: 20px 50px 50px 50px;
+}
+
+.modal-showed {
+  display: flex;
+}
+
+.modal-label {
+  display: block;
+  font-size: 16px;
+}
+
+.input {
+  display: block;
+  padding: 10px 200px 10px 10px;
+
+}
+
+.input-date {
+  width: 100%;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+#registration-done {
+  /* position: absolute; */
+  background-color: #c1d4b1;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+#registration-done:hover {
+  background-color: #787373;
+  opacity: 0.9;
 }
 
 .all-elements {
@@ -131,7 +221,6 @@
 
 .product-card__price-text {
   font-weight: 700;
-  font-style: Bold;
   font-size: 20px;
   line-height: 24px;
   color: #515076;
@@ -139,8 +228,154 @@
 
 .product-card__price {
   font-weight: 400;
-  font-style: Regular;
   font-size: 20px;
   line-height: 24px;
   color: #515076;
+}
+
+footer {
+  background-color: #3A3A3A;
+  padding: 85px 75px 0px 84px;
+}
+
+.footer-wrapper {
+  display: flex;
+  margin: auto;
+}
+
+.product-hero-title {
+  margin: auto;
+}
+
+.product-hero-title,
+.product-hero-text {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 154%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+
+}
+
+.product-hero-text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.icon-telegram {
+  margin-right: 30px;
+}
+
+.newsletter {
+  margin-left: 100px;
+  margin-right: 195px;
+}
+
+.subscribe-promo {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 13px;
+  padding-left: 88px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 22px;
+  padding-left: 36px;
+  padding-right: 15px;
+}
+
+
+#input-email {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  outline: none;
+  color: #000000BF;
+  border: none;
+  border-right: 1px solid #000000;
+  padding-right: 90px;
+}
+
+#subscribe {
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+  background: none;
+  padding-left: 21px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+
+.links-header {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FFFFFF;
+
+}
+
+.link a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.link a:visited {
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 162px;
+  padding-bottom: 28px;
+}
+
+.line {
+  height: 1px;
+  width: 66px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
 }
