@@ -11,6 +11,11 @@ const submitRegistrationBtn = document.getElementById('registration-done');
 
 const modalReject = document.querySelector('.registration-reject');
 
+const modalData = new FormData(modalForm);
+const data = Object.fromEntries(modalData.entries());
+
+const user = { ...data, createdOn: new Date() };
+
 // задание №4 добавление логики к футеру
 
 emailForm.addEventListener('submit', (event) => {
@@ -22,10 +27,10 @@ emailForm.addEventListener('submit', (event) => {
 
 // задание №5 логика для открытия-закрытия модального окна
 
-openRegistrationBtn.addEventListener('click', () => {
-  modal.classList.add('modal-showed');
-  overlay.style.display = 'block';
-});
+// openRegistrationBtn.addEventListener('click', () => {
+//   modal.classList.add('modal-showed');
+//   overlay.style.display = 'block';
+// });
 
 closeRegistrationBtn.addEventListener('click', () => {
   modal.classList.remove('modal-showed');
@@ -73,5 +78,3 @@ submitRegistrationBtn.addEventListener('click', () => {
   } else confirm('Регистрация не удалась!');
 });
 
-
-const user = updatedData;
