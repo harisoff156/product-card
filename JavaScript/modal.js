@@ -4,7 +4,7 @@ export class Modal {
     this.modal = this.modalWrapper.querySelector('.modal');
     this.overlay = this.modalWrapper.querySelector('.overlay');
     this.openModalButton = this.modalWrapper.querySelector('#open-registration-button');
-    this.closeModalButton = this.modalWrapper.querySelector('.close-register-button');
+    this.closeModalBtn = this.modalWrapper.querySelector('.close-register-button');
   }
   openModal() {
     this.modal.classList.add('modal-showed');
@@ -20,7 +20,7 @@ export class Modal {
     this.overlay.style.display = 'none';
   }
   closeButton() {
-    this.closeModalButton.addEventListener('click', () => {
+    this.closeModalBtn.addEventListener('click', () => {
       this.closeModal();
     });
   }

@@ -14,7 +14,7 @@ emailForm.submitFooter();
 modal.openButton();
 modal.closeButton();
 
-// задание №6 логика работы с модальным окном
+// задание №6 логика для аботы с модальным окном
 modalForm.submit(() => { modal.closeModal() });
 
 

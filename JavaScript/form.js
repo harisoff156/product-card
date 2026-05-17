@@ -24,7 +24,7 @@ export class Form {
         return;
       }
       if (this.password.value !== this.passwordRepeat.value) {
-        this.passwordRepeat.setCustomValidity('Пароли не совпадают!');
+        this.passwordRepeat.setCustomValidity('Пароли не совпадают');
         this.password.reportValidity();
         return;
       }
