@@ -3,7 +3,7 @@ export class Modal {
     this.modalWrapper = modalWrapper;
     this.modal = this.modalWrapper.querySelector('.modal');
     this.overlay = this.modalWrapper.querySelector('.overlay');
-    this.openModalButton = this.modalWrapper.querySelector('#open-registration-button');
+
     this.closeModalButton = this.modalWrapper.querySelector('.close-register-button');
   }
   openModal() {
