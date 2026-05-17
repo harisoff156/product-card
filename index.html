@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <div class="button_wrapper">
     <button type="button" id="recolor-first-card-button" class="btn">Перекрасить фон первой карточки</button>
     <button type="button" id="open-google-button" class="btn">Перейти на страницу Google</button>
@@ -21,41 +22,37 @@
     <button type="button" id="click-recolor-button" class="btn recolor">Поменять цвет кнопки</button>
   </div>
 
-  <button id="open-registration-button"> Зарегистрироваться</button>
-
-  <div class="overlay"></div>
-  <div class="modal">
-    <h3 class="modal-title" style="margin: auto;">Регистрация</h3>
-    <div class="close-register-button">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
+  <div id="modal-wrapper">
+    <button id="open-registration-button"> Зарегистрироваться</button>
+    <div class="overlay"></div>
+    <div class="modal">
+      <h3 class="modal-title" style="margin: auto;">Регистрация</h3>
+      <div class="close-register-button">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <form class="modal-form">
+        <label for="name-input" class="modal-label">имя</label>
+        <input type="text" placeholder="введите имя" name="name" class="input" id="name-input" required>
+        <label for="surname-input" class="modal-label">фамилия</label>
+        <input type="text" placeholder="введите фамилию" name="surname" class="input" id="surname-input" required>
+        <label for="birthday-input" class="modal-birthday">дата рождения</label>
+        <input type="date" placeholder="введите дату рождения" name="birthday" class="input-date" id="birthday-input"
+          required>
+        <label for="login-input" class="modal-label">логин</label>
+        <input type="text" placeholder="введите логин" name="login" class="input" id="login-input" required>
+        <label for="password-input" class="modal-label">пароль</label>
+        <input type="password" placeholder="введите пароль" name="password" class="input" id="password-input"
+          pattern="(?=.*[0-9])(?=.*[A-Za-z]).{8,}" required>
+        <label for="password-repeat-input" class="modal-label">подтверждение пароля</label>
+        <input type="password" placeholder="повторите пароль" name="password-repeat" class="input"
+          id="password-repeat-input" pattern="(?=.*[0-9])(?=.*[A-Za-z]).{8,}" required>
+        <button type="submit" id="registration-done">Зарегистрироваться</button>
+      </form>
     </div>
-    <form class="modal-form">
-      <label for="name-input" class="modal-label">имя</label>
-      <input type="text" placeholder="введите имя" name="name" class="input" id="name-input" required>
 
-      <label for="surname-input" class="modal-label">фамилия</label>
-      <input type="text" placeholder="введите фамилию" name="surname" class="input" id="surname-input" required>
-
-      <label for="birthday-input" class="modal-birthday">дата рождения</label>
-      <input type="date" placeholder="введите дату рождения" name="birthday" class="input-date" id="birthday-input"
-        required>
-
-      <label for="login-input" class="modal-label">логин</label>
-      <input type="text" placeholder="введите логин" name="login" class="input" id="login-input" required>
-
-      <label for="password-input" class="modal-label">пароль</label>
-      <input type="password" placeholder="введите пароль" name="password" class="input" id="password-input"
-        pattern="(?=.*[0-9])(?=.*[A-Za-z]).{8,}" required>
-
-      <label for="password-repeat-input" class="modal-label">подтвердите пароль</label>
-      <input type="password" placeholder="повторите пароль" name="password-repeat" class="input"
-        id="password-repeat-input" pattern="(?=.*[0-9])(?=.*[A-Za-z]).{8,}" required>
-
-      <button type="submit" id="registration-done">Зарегистрироваться</button>
-    </form>
   </div>
 
 
@@ -118,10 +115,8 @@
     </div>
   </footer>
 
-  <script type="module" src="/JavaScript/homework-8.js"></script>
-  <script type="module" src="/JavaScript/product-cards.js"></script>
-  <script type="module" src="/JavaScript/homework-9.js"></script>
-  <script src="/JavaScript/script.js"></script>
+  <!-- <script type="module" src="/JavaScript/homework-8.js"></script> -->
+  <script type="module" src="/JavaScript/main.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@ export class Form {
         return;
       }
       if (this.password.validity.patternMismatch) {
-        this.password.setCustomValidity('Пароль должен содержать минимум 8 символов, хотя бы одну цифру и одну букву');
+
         this.password.reportValidity();
         return;
       }
